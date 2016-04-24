@@ -42,20 +42,22 @@ app.post('/webhook/', function (req, res) {
         }
       }
       if (num === 1) {
-        if (text > n) {
-          sendTextMessage(sender, 'มากไปครับ')
-          count++
-        }else if (text < n) {
-          sendTextMessage(sender, 'น้อยไปครับ')
-          count++
-        }else if (text == n) {
-          sendTextMessage(sender, 'ถูกต้องครับ ทำไป ' + count + ' ครั้ง' + '\n' + '')
-        }else if (text == 'จบ') {
-          sendTextMessage(sender, 'กากหวะ เลิกเล่นง่ายๆ')
-          count = 0
-          num = 0
-        } else {
-          sendTextMessage(sender, 'พิมพ์เลข 1-100 ซิเว้ย')
+        if (text != 'เริ่ม') {
+          if (text > n) {
+            sendTextMessage(sender, 'มากไปครับ')
+            count++
+          }else if (text < n) {
+            sendTextMessage(sender, 'น้อยไปครับ')
+            count++
+          }else if (text == n) {
+            sendTextMessage(sender, 'ถูกต้องครับ ทำไป ' + count + ' ครั้ง' + '\n' + '')
+          }else if (text == 'จบ') {
+            sendTextMessage(sender, 'กากหวะ เลิกเล่นง่ายๆ')
+            count = 0
+            num = 0
+          } else {
+            sendTextMessage(sender, 'พิมพ์เลข 1-100 ซิเว้ย')
+          }
         }
       }
     }
