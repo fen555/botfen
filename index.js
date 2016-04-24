@@ -46,7 +46,7 @@ app.post('/webhook/', function (req, res) {
           sendTextMessage(sender, 'น้อยไปครับ')
           count++
         }else if (text == n) {
-          sendTextMessage(sender, 'ถูกต้องครับ ทำไป ' + count + 'ครั้ง')
+          sendTextMessage(sender, 'ถูกต้องครับ ทำไป ' + count + ' ครั้ง' + '\nhttps://lh4.googleusercontent.com/QAS5vXyxevCfFYBjYOXBnxVvo84BpEOePAeMm2ztTBVh58XMbiIIgrXLqnBmrDH82oaimFGTnIzqPBixNTLUDajjMQW3IimAEZZSKhnP2csLUGjDYYU972Q-FQ')
         }
       }
     }
