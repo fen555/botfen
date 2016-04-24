@@ -30,10 +30,12 @@ app.post('/webhook/', function (req, res) {
       if (text === 'Hi') {
         sendTextMessage(sender, 'Hi! I am CoFen')
       } else {
-        //sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
+        // sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
       }
       if (text === 'ขอเพลงหน่อย') {
         sendTextMessage(sender, 'https://www.youtube.com/watch?v=HwK0p04BsD4')
+      } else {
+        sendTextMessage(sender, 'ไอควาย พิมพ์ไรมา')
       }
     }
   }
