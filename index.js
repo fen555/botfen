@@ -36,6 +36,8 @@ app.post('/webhook/', function (req, res) {
           num = 1
           n = Math.floor((Math.random() * 100) + 1)
           console.log(n)
+        }else {
+          sendTextMessage(sender, 'พิมพ์ เริ่ม เพื่อเริ่มเกม')
         }
       }
       if (num === 1) {
