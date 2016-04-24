@@ -27,10 +27,10 @@ app.post('/webhook/', function (req, res) {
       text = event.message.text
       // Handle a text message from this sender
       console.log(text)
-      if (text === "Hi") {
+      if (text === 'Hi') {
         sendTextMessage(sender, 'Hi! I am CoFen')
-      }else {
-      sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
+      } else {
+        //sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
       }
     }
   }
