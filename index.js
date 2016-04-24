@@ -32,8 +32,8 @@ app.post('/webhook/', function (req, res) {
       } else {
         //sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
       }
-      if (text === 'ดูดวง') {
-        sendTextMessage(sender, 'ราศีอะไรครับ')
+      if (text === 'ขอเพลงหน่อย') {
+        sendTextMessage(sender, 'https://www.youtube.com/watch?v=HwK0p04BsD4')
       }
     }
   }
