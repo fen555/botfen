@@ -33,7 +33,7 @@ app.post('/webhook/', function (req, res) {
         if (text === 'เริ่ม') {
           sendTextMessage(sender, 'ทายดูครับ 1-100')
           num = 1
-          n = (Math.random() * 100) + 1
+          n = Math.floor((Math.random() * 100) + 1)
           console.log(n)
         }
       }
