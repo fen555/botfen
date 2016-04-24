@@ -44,13 +44,13 @@ app.post('/webhook/', function (req, res) {
       if (num === 1) {
         if (text != 'เริ่ม') {
           if (text > n) {
-            sendTextMessage(sender, 'มากไปครับ')
+            sendTextMessage(sender, "มากไปครับ :'(")
             count++
           }else if (text < n) {
-            sendTextMessage(sender, 'น้อยไปครับ')
+            sendTextMessage(sender, "น้อยไปครับ :'(")
             count++
           }else if (text == n) {
-            sendTextMessage(sender, 'ถูกต้องครับ ทำไป ' + count + ' ครั้ง' + '\n' + '')
+            sendTextMessage(sender, 'ถูกต้องครับ ทำไป ' + count + ' ครั้ง' + '\n' + ':8')
           }else if (text == 'จบ') {
             sendTextMessage(sender, 'กากหวะ เลิกเล่นง่ายๆ')
             count = 0
