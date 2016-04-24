@@ -40,9 +40,11 @@ app.post('/webhook/', function (req, res) {
       if (num === 1) {
         if (text > n) {
           sendTextMessage(sender, 'มากไปครับ')
-        }else if (text < n) {
+        }
+        if (text < n) {
           sendTextMessage(sender, 'น้อยไปครับ')
-        }else if (text === n) {
+        }
+        if (text === n) {
           sendTextMessage(sender, 'ถูกต้องครับ')
         }
       }
