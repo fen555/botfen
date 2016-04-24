@@ -32,6 +32,9 @@ app.post('/webhook/', function (req, res) {
       } else {
         //sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
       }
+      if (text === 'ดูดวง') {
+        sendTextMessage(sender, 'ราศีอะไรครับ')
+      }
     }
   }
   res.sendStatus(200)
