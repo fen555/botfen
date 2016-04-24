@@ -38,6 +38,7 @@ app.post('/webhook/', function (req, res) {
           console.log(n)
         } else {
           sendTextMessage(sender, 'พิมพ์ เริ่ม เพื่อเริ่มเกม')
+          num = 0
         }
       }
       if (num === 1) {
