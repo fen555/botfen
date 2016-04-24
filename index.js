@@ -32,11 +32,11 @@ app.post('/webhook/', function (req, res) {
       console.log(text)
       if (num === 0) {
         if (text === 'เริ่ม') {
-          sendTextMessage(sender, 'ทายดูครับ 1-100')
+          sendTextMessage(sender, 'ทายดูครับ 1-100 \n พิมพ์ จบ เพื่อเลิกเล่น')
           num = 1
           n = Math.floor((Math.random() * 100) + 1)
           console.log(n)
-        }else {
+        } else {
           sendTextMessage(sender, 'พิมพ์ เริ่ม เพื่อเริ่มเกม')
         }
       }
@@ -48,7 +48,13 @@ app.post('/webhook/', function (req, res) {
           sendTextMessage(sender, 'น้อยไปครับ')
           count++
         }else if (text == n) {
-          sendTextMessage(sender, 'ถูกต้องครับ ทำไป ' + count + ' ครั้ง' + '\n' + 'https://lh4.googleusercontent.com/QAS5vXyxevCfFYBjYOXBnxVvo84BpEOePAeMm2ztTBVh58XMbiIIgrXLqnBmrDH82oaimFGTnIzqPBixNTLUDajjMQW3IimAEZZSKhnP2csLUGjDYYU972Q-FQ')
+          sendTextMessage(sender, 'ถูกต้องครับ ทำไป ' + count + ' ครั้ง' + '\n' + '')
+        }else if (text == 'จบ') {
+          sendTextMessage(sender, 'กากหวะ เลิกเล่นง่ายๆ')
+          count = 0
+          num = 0
+        } else {
+          sendTextMessage(sender, 'พิมพ์เลข 1-100 ซิเว้ย')
         }
       }
     }
