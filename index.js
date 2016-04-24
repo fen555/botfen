@@ -6,6 +6,7 @@ var text
 var token = 'CAABcdjl6yssBABaft6BjjeZBWQ2v0pOvEUYE0iBFakzJXHE6cPIgyOQi1BlLO6ldZAT9FmX8WR94UXVZB6bIBLQBVDNPaA37sYUIPdHzL225solH4jkLmFZCZBtxsnndfvSzb3lD8BTMFLGxY4nErcOzAdmC1Phys7ZBsUWEySz9JIf6c28jkha0GN2LRsXUpxSfnCTV1JFwZDZD'
 var num = 0
 var n = 0
+var count = 0
 
 app.use(bodyParser.json())
 
@@ -40,10 +41,12 @@ app.post('/webhook/', function (req, res) {
       if (num === 1) {
         if (text > n) {
           sendTextMessage(sender, 'มากไปครับ')
+          count++
         }else if (text < n) {
           sendTextMessage(sender, 'น้อยไปครับ')
+          count++
         }else if (text == n) {
-          sendTextMessage(sender, 'ถูกต้องครับ')
+          sendTextMessage(sender, 'ถูกต้องครับ ทำไป ' + count + 'ครั้ง')
         }
       }
     }
