@@ -1,0 +1,22 @@
+{
+  "name": "botfen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fen555/botfen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fen555/botfen/issues"
+  },
+  "homepage": "https://github.com/fen555/botfen#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
