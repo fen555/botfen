@@ -52,6 +52,7 @@ app.post('/webhook/', function (req, res) {
           }else if (text == n) {
             count++
             sendTextMessage(sender, 'ถูกต้องครับ ทำไป ' + count + ' ครั้ง' + '\n' + '8|')
+            num = 0
           }else if (text == 'จบ') {
             sendTextMessage(sender, 'กากหวะ เลิกเล่นง่ายๆ')
             count = 0
