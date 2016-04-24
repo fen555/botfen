@@ -4,6 +4,8 @@ var request = require('request')
 var app = express()
 var text
 var token = 'CAABcdjl6yssBABaft6BjjeZBWQ2v0pOvEUYE0iBFakzJXHE6cPIgyOQi1BlLO6ldZAT9FmX8WR94UXVZB6bIBLQBVDNPaA37sYUIPdHzL225solH4jkLmFZCZBtxsnndfvSzb3lD8BTMFLGxY4nErcOzAdmC1Phys7ZBsUWEySz9JIf6c28jkha0GN2LRsXUpxSfnCTV1JFwZDZD'
+var num = 0
+var n = 0
 
 app.use(bodyParser.json())
 
@@ -27,15 +29,22 @@ app.post('/webhook/', function (req, res) {
       text = event.message.text
       // Handle a text message from this sender
       console.log(text)
-      if (text === 'Hi') {
-        sendTextMessage(sender, 'Hi! I am CoFen')
-      } else {
-        // sendTextMessage(sender, 'Text received, echo: ' + text.substring(0, 200))
+      if (num === 0) {
+        if (text === 'เริ่ม') {
+          sendTextMessage(sender, 'ทายดูครับ 1-100')
+          num = 1
+          n = (Math.random() * 100) + 1
+          console.log(n)
+        }
       }
-      if (text === 'ขอเพลงหน่อย') {
-        sendTextMessage(sender, 'https://www.youtube.com/watch?v=HwK0p04BsD4')
-      } else {
-        sendTextMessage(sender, 'ไอควาย พิมพ์ไรมา')
+      if (num === 1) {
+        if (text > n) {
+          sendTextMessage(sender, 'มากไปครับ')
+        }else if (text < n) {
+          sendTextMessage(sender, 'น้อยไปครับ')
+        }else if (text === n) {
+          sendTextMessage(sender, 'ถูกต้องครับ')
+        }
       }
     }
   }
