@@ -31,7 +31,7 @@ app.post('/webhook/', function (req, res) {
 
       console.log(text)
       sendTextMessage(sender, text)
-      var sln = txt.length
+      var sln = text.length
       console.log(sln)
 
     }
