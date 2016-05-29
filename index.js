@@ -93,7 +93,7 @@ app.post('/webhook/', function (req, res) {
         sendTextMessage(sender, 'avg : ' + sum / num.length)
       }
       if (check === 0) {
-        sendTextMessage(sender, 'Mont')
+        sendTextMessage(sender, 'You type wrong please try again!')
       }
     }
   }
