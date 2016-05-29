@@ -9,7 +9,7 @@ var n = 0
 var count = 0
 
 app.use(bodyParser.json())
-
+app.use(express.static('index.html'))
 app.get('/', function (req, res) {
   res.send('Hello World!')
 })
