@@ -12,7 +12,8 @@ var count = 0
 app.use(bodyParser.json())
 
 app.get('/', function (req, res) {
-  res.send('Hello World!')
+  res.sendfile('index.html');
+  // res.send('Hello World!')
 })
 
 app.get('/webhook/', function (req, res) {
@@ -32,8 +33,8 @@ app.post('/webhook/', function (req, res) {
       var check = 2
       console.log(text)
       // sendTextMessage(sender, text)
-      var sln = text.length
-      // console.log('length : ' + sln)
+      var lentext = text.length
+      // console.log('length : ' + lentext)
       var getFunc = text.substring(0, 3)
       console.log('func : ' + getFunc)
       if (getFunc !== 'sum' && getFunc !== 'max' && getFunc !== 'min' && getFunc !== 'avg')check = 0
