@@ -33,10 +33,10 @@ app.post('/webhook/', function (req, res) {
       sendTextMessage(sender, text)
       var sln = text.length
       console.log('length : ' + sln)
-      var getFunc = text.substring(0, 4)
+      var getFunc = text.substring(0, 3)
       console.log('func : ' + getFunc)
       if (getFunc === 'sum') {
-        var getText = text.substring(5, text.length)
+        var getText = text.substring(4, text.length)
         console.log('number : ' + getText)
       }
     }
