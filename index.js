@@ -77,6 +77,16 @@ app.post('/webhook/', function (req, res) {
           sendTextMessage(sender, 'min : ' + num2)
         }
       }
+
+      if (getFunc === 'avg') {
+        var gettext = text.substring(4, text.length)
+        console.log('number : ' + gettext)
+        var space = gettext.search(' ')
+        var num1 = parseFloat(gettext.substring(0, space))
+        var gettext2 = text.substring(space, text.length)
+        var space2 = gettext2.search(' ')
+        console.log('sp : ' + space2)
+      }
     }
   }
   res.sendStatus(200)
