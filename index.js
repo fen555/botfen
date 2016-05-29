@@ -32,7 +32,7 @@ app.post('/webhook/', function (req, res) {
       console.log(text)
       // sendTextMessage(sender, text)
       var sln = text.length
-      console.log('length : ' + sln)
+      // console.log('length : ' + sln)
       var getFunc = text.substring(0, 3)
       console.log('func : ' + getFunc)
 
@@ -80,14 +80,15 @@ app.post('/webhook/', function (req, res) {
 
       if (getFunc === 'avg') {
         var gettext = text.substring(4, text.length)
-        console.log('number : ' + gettext)
+        console.log('text : ' + gettext)
         var space = gettext.search(' ')
         var num1 = parseFloat(gettext.substring(0, space))
-        var gettext2 = gettext.substring(space, text.length-1)
+        var gettext2 = gettext.substring(space, text.length - 1)
         var space2 = gettext2.search(' ')
-        console.log('sp : ' + space2)
-        if(space2 === 0){
-          var num1 = parseFloat(gettext2.substring(0, gettext2.search(' ')))
+        // console.log('sp : ' + space2)
+        if (space2 === 0) {
+          var num2 = parseFloat(gettext2.substring(0, gettext2.search(' ')))
+          console.log('num1 : ' + num1 + ' num2 : ' + num2)
         }
       }
     }
