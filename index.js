@@ -42,7 +42,7 @@ app.post('/webhook/', function (req, res) {
         var num1 = gettext.substring(0, space)
         var num2 = gettext.substring(space, gettext.length)
         console.log('number1 : ' + num1 + ' number2 : ' + num2)
-        var sum = num1 + num2
+        var sum = parseFloat(num1) + parseFloat(num2)
         console.log('sum : ' + sum)
         sendTextMessage(sender, 'sum : ' + sum)
       }
