@@ -83,7 +83,7 @@ app.post('/webhook/', function (req, res) {
         console.log('number : ' + gettext)
         var space = gettext.search(' ')
         var num1 = parseFloat(gettext.substring(0, space))
-        var gettext2 = text.substring(space, text.length-1)
+        var gettext2 = gettext.substring(space, text.length-1)
         var space2 = gettext2.search(' ')
         console.log('sp : ' + space2)
       }
