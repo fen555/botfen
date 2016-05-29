@@ -88,17 +88,8 @@ app.post('/webhook/', function (req, res) {
         for (var i = 0;i < num.length;i++) {
           sum += parseFloat(num[i])
         }
-        console.log('sum : ' + sum)
-      // var space = gettext.search(' ')
-      // var num1 = parseFloat(gettext.substring(0, space))
-      // var gettext2 = gettext.substring(space, text.length - 1)
-      // var space2 = gettext2.search(' ')
-      // // console.log('sp : ' + space2)
-      // if (space2 === 0) {
-      //   console.log('sp2 : ' + gettext2.search(' '))
-      //   var num2 = parseFloat(gettext2.substring(0, gettext2.length))
-      //   console.log('num1 : ' + num1 + ' num2 : ' + num2)
-      // }
+        console.log('sum : ' + sum + 'avg : ' + sum/num.length)
+        sendTextMessage(sender, 'avg : ' + sum/num.length)
       }
     }
   }
