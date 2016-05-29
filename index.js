@@ -90,7 +90,7 @@ app.post('/webhook/', function (req, res) {
           sum += parseFloat(num[i])
         }
         console.log('sum : ' + sum + 'avg : ' + sum / num.length)
-        sendTextMessage(sender, 'avg : ' + sum / num.length)
+        sendTextMessage(sender, 'avg : ' + (sum / num.length).toFixed(2))
       }
       if (check === 0) {
         sendTextMessage(sender, 'You type wrong please try again!')
