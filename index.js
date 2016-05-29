@@ -80,10 +80,15 @@ app.post('/webhook/', function (req, res) {
 
       if (getFunc === 'avg') {
         var num = []
+        var sum
         var gettext = text.substring(4, text.length)
         console.log('text : ' + gettext)
         num = gettext.split(' ')
         console.log('split : ' + num)
+        for (var i = 0;i < num.length;i++) {
+          sum += num[i]
+        }
+        console.log('sum : ' + sum)
       // var space = gettext.search(' ')
       // var num1 = parseFloat(gettext.substring(0, space))
       // var gettext2 = gettext.substring(space, text.length - 1)
