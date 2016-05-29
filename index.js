@@ -80,7 +80,7 @@ app.post('/webhook/', function (req, res) {
 
       if (getFunc === 'avg') {
         var num = []
-        var sum
+        var sum = 0
         var gettext = text.substring(4, text.length)
         console.log('text : ' + gettext)
         num = gettext.split(' ')
