@@ -11,8 +11,7 @@ var count = 0
 app.use(bodyParser.json())
 
 app.get('/', function (req, res) {
-  app.use(express.static('index.html'))
-  // res.send('Hello World!')
+  res.send('Hello World!')
 })
 
 app.get('/webhook/', function (req, res) {
