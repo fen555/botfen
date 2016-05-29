@@ -62,6 +62,21 @@ app.post('/webhook/', function (req, res) {
           sendTextMessage(sender, 'max : ' + num2)
         }
       }
+
+      if (getFunc === 'min') {
+        var gettext = text.substring(4, text.length)
+        console.log('number : ' + gettext)
+        var space = gettext.search(' ')
+        var num1 = parseFloat(gettext.substring(0, space))
+        var num2 = parseFloat(gettext.substring(space, gettext.length))
+        console.log('number1 : ' + num1 + ' number2 : ' + num2)
+        if (num1 < num2) {
+          sendTextMessage(sender, 'max : ' + num1)
+        }
+        if (num2 < num1) {
+          sendTextMessage(sender, 'max : ' + num2)
+        }
+      }
     }
   }
   res.sendStatus(200)
